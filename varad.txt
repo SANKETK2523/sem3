@@ -1,1 +1,153 @@
-hello
+$ git clone https://github.com/SANKETK2523/sem3.git
+Cloning into 'sem3'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3 (feature)
+$ ls
+README.md  sem3/  varad.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3 (feature)
+$ cd sem3
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (main)
+$ git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (main)
+$  git commit -m "new content added to varad.txt"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (main)
+$ git remote add origin https://github.com/SANKETK2523/sem3.git
+error: remote origin already exists.
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (main)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$  git remote add origin https://github.com/SANKETK2523/sem3.git
+error: remote origin already exists.
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ git remote -v
+origin  https://github.com/SANKETK2523/sem3.git (fetch)
+origin  https://github.com/SANKETK2523/sem3.git (push)
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ git push origin feature
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/SANKETK2523/sem3/pull/new/feature
+remote:
+To https://github.com/SANKETK2523/sem3.git
+ * [new branch]      feature -> feature
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ ls
+README.md
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ touch varad.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ echo "hello" > varad.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ git add varad.txt
+warning: in the working copy of 'varad.txt', LF will be replaced by CRLF the next time Git touches it
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ git commit -m "new file"
+[feature 93a39c1] new file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 varad.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ ls
+README.md  varad.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ touch abc.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ echo "hello" > varad.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ git add abc.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ git commit -m "new text file"
+[feature 7bc35f9] new text file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ ls
+README.md  abc.txt  varad.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ git status
+On branch feature
+nothing to commit, working tree clean
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ git push origin feature
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 565 bytes | 565.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/SANKETK2523/sem3.git
+   04cc312..7bc35f9  feature -> feature
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (main)
+$ git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 898 bytes | 149.00 KiB/s, done.
+From https://github.com/SANKETK2523/sem3
+ * branch            main       -> FETCH_HEAD
+   04cc312..f440c8f  main       -> origin/main
+Updating 04cc312..f440c8f
+Fast-forward
+ abc.txt   | 0
+ varad.txt | 1 +
+ 2 files changed, 1 insertion(+)
+ create mode 100644 abc.txt
+ create mode 100644 varad.txt
+
+practical@DESKTOP-RDM7TN4 MINGW64 ~/Desktop/Varad/sem3/sem3 (main)
+$
